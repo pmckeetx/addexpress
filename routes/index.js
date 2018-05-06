@@ -10,7 +10,8 @@ router.post('/', function(req, res, next) {
 	var anbr = parseInt( req.body.a );
 	var bnbr = parseInt( req.body.b );
 
-	res.render( 'total', { title: 'Add Express', a: req.body.a, b: req.body.b, total: anbr + bnbr } );
+	var sum = addNbrs( anbr, bnbr )
+	res.render( 'total', { title: 'Add Express', a: req.body.a, b: req.body.b, total: sun } );
 });
 
 module.exports = router;
